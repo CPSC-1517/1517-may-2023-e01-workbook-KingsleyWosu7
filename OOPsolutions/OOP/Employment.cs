@@ -184,5 +184,18 @@ namespace OOP
             }
             StartDate = startdate;
         }
+
+
+
+        public void CorrectStartDate()
+        {
+            //startdate propety is autoimplemented
+            //has no validation
+            //need to do any validation on the incoming value whereever you plan to alter the existing value in the class
+
+
+        }
+
+
     }
 }
