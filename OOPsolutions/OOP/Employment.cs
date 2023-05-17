@@ -17,12 +17,47 @@
 
             set
             {
-                if (string.IsNullOrWhiteSpace(value))
+             if (string.IsNullOrWhiteSpace(value))
                 {
                     throw new ArgumentNullException("Title is required");
                 }
                 _Title = value;
             }
+
         }
+
+        public SupervisoryLevel Level
+        {
+            get { return _level; }
+
+
+            private set
+            {
+                //test for enum
+                if (!Enum.IsDefined(typeof(SupervisoryLevel), value))
+                {
+                    throw new ArgumentException($"Supervisory level is invalid: {value}");
+                }
+
+
+            }
+        }
+
+        public double Years
+        {
+            get { return _Years; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("value");
+                }
+                _Years = value;
+            }
+
+            
+        }
+
+        public DateTime StartDate { get; set; }
     }
 }
