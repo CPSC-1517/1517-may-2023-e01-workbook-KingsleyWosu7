@@ -187,15 +187,25 @@ namespace OOP
 
 
 
-        public void CorrectStartDate()
+        public void CorrectStartDate(DateTime startdate)
         {
             //startdate propety is autoimplemented
             //has no validation
             //need to do any validation on the incoming value whereever you plan to alter the existing value in the class
+            if (startdate >= DateTime.Today.AddDays(1))
+            {
+                throw new ArgumentException($"The start date {startdate} is in the future");
+            }
+            StartDate = startdate;
 
+        }
+        //every class has a ToString methods
 
+        public override string ToString()
+        {
+            return $"";
         }
 
 
-    }
-}
+    }//end of employment class
+}// end of namespace
