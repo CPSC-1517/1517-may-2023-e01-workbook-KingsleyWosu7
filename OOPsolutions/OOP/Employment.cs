@@ -199,13 +199,21 @@ namespace OOP
             StartDate = startdate;
 
         }
+
+
+        public void UpdateCurrentEmploymentYears()
+        {
+            TimeSpan span = DateTime.Now - StartDate;
+            Years = Math.Round((span.Days / 365.25), 1);
+        }
+
         //every class has a ToString methods
 
         public override string ToString()
         {
-            return $"";
+            return $"{Title}, {Level}, {StartDate.ToString("MMM dd, yyyy")}, {Years}";
         }
 
-
+      
     }//end of employment class
 }// end of namespace
