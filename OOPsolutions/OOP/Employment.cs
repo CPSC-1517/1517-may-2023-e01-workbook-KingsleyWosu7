@@ -101,7 +101,7 @@ namespace OOP
                 //if ( value < 0 ) //using a Utilities generic method to do this test
                 if (!Utilities.IsZeroOrPositive(value))
                 {
-                    throw new ArgumentOutOfRangeException("value");
+                    throw new ArgumentOutOfRangeException(value.ToString());
                 }
                 _Years = value;
             }
