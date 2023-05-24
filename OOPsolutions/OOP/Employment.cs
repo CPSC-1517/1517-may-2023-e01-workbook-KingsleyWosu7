@@ -183,8 +183,30 @@ namespace OOP
                 throw new ArgumentException($"The start date {startdate} is in the future");
             }
             StartDate = startdate;
+            if (years > 0.0)
+            {
+                Years = (double)years;  
+            }
+            else
+            {
+                TimeSpan span = DateTime.Now - StartDate;
+                Years = Math.Round((span.Days / 365.25), 1);
+            }
         }
 
+        public void SetEmploymentResponsiblityLevel(SupervisoryLevel level)
+        {
+            //the property has a private set
+            //therefore the only ways to assign a value to the Property
+            //   is either: via the constructor are creation time
+            //          or: via a public method within the class
+            //
+            //what about validation the value?
+            //validation can be done in multiple places
+            //   a) can it be done in this method: Yes
+            //   b) can it be done in the property: Yes if property fully implement
+            Level = level;
+        }
 
 
         public void CorrectStartDate(DateTime startdate)
@@ -201,7 +223,7 @@ namespace OOP
         }
 
 
-        public void UpdateCurrentEmploymentYears()
+        public void UpdateCurrentEmploymentYearsExperience()
         {
             TimeSpan span = DateTime.Now - StartDate;
             Years = Math.Round((span.Days / 365.25), 1);
@@ -214,6 +236,6 @@ namespace OOP
             return $"{Title}, {Level}, {StartDate.ToString("MMM dd, yyyy")}, {Years}";
         }
 
-      
+
     }//end of employment class
 }// end of namespace
