@@ -1,4 +1,6 @@
 ﻿#nullable disable
+using OOP;
+
 namespace OOPsReview
 {
     public class Employment
@@ -223,17 +225,18 @@ namespace OOPsReview
         }
 
 
-        public void UpdateCurrentEmploymentYearsExperience()
+        public double UpdateCurrentEmploymentYearsExperience()
         {
             TimeSpan span = DateTime.Now - StartDate;
             Years = Math.Round((span.Days / 365.25), 1);
+            return Years;
         }
 
         //every class has a ToString methods
 
         public override string ToString()
         {
-            return $"{Title}, {Level}, {StartDate.ToString("MMM dd, yyyy")}, {Years}";
+            return $"{Title},{Level},{StartDate.ToString("MMM dd, yyyy")},{Years}";
         }
 
 
