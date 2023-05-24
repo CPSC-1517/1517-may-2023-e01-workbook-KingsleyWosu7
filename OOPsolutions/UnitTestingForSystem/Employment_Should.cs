@@ -7,6 +7,7 @@ namespace UnitTestingForSystem
 {
     public class Employment_Should
     {
+        //Xunit TESTING
         #region Valid Data
         [Fact]
         public void Create_New_Default_Instance()
@@ -160,7 +161,7 @@ namespace UnitTestingForSystem
 
 
             //When - Act execution
-            double actual = sut.UpdateCurrentEmploymentYearsExperince();
+            double actual = sut.UpdateCurrentEmploymentYearsExperience();
 
             //Then - Assert check
             actual.Should().Be(expectedYears);
