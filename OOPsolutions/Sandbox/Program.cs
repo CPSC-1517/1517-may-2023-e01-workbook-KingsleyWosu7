@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using OOPsReview;
 
 
@@ -56,3 +57,4 @@ switch (myHome.Province.ToLower())
             break;
         }
 }
+Console.WriteLine(flag);
