@@ -14,7 +14,7 @@ namespace OOP
         //static classes are shared between all outside users at the same time
         //DO NOT consider saving data within s static class BECAUSE you cannot be
         //  certain it will be there when your use the class again
-        //consider placing GENERIC re-usable methods with a static class
+        //consider placing GENERIC re-usable methods within a static class
 
         //sample of a generic method: numeric is a zero or positive value
         public static bool IsZeroOrPositive(double value)
