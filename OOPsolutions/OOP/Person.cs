@@ -9,8 +9,12 @@ namespace OOPsReview
     public class Person
     {
 
-        public string FirstName;
-        public string LastName;
+        private string _FirstName;
+        private string _LastName;
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
         public Person(string firstName, string lastName)
         {
             FirstName = firstName;
