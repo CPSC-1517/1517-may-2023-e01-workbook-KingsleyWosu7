@@ -24,7 +24,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OOPsReview\OOPsReview.csproj" />
-    <ProjectReference Include="..\OOP\OOPsReview.csproj" />
   </ItemGroup>
 
 </Project>
