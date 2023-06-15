@@ -6,7 +6,7 @@ namespace WebApp.Pages.Samples
     public class BasicEventsModel : PageModel
     {
         //page properties
-        public string Feedback;
+        public string Feedback { get; set; }
         /**************
          * OnGet is a method that is called each and everytime this page is created
          * The internet is a stateless environment
